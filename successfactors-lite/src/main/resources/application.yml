@@ -1,0 +1,92 @@
+# ============================================================
+# Spring Boot Application Configuration
+# ============================================================
+
+spring:
+  application:
+    name: successfactors-lite
+
+  # ============================================================
+  # DATABASE — PostgreSQL
+  # Sprint 2: Multi-Tenancy + DB Configuration
+  # ============================================================
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sflit
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+    # Connection pool (HikariCP — default in Spring Boot)
+    hikari:
+      maximum-pool-size: 10        # Max DB connections in pool
+      minimum-idle: 5              # Min idle connections
+      connection-timeout: 30000   # ms to wait for connection
+      idle-timeout: 600000        # ms before idle connection is removed
+
+  # ============================================================
+  # JPA / HIBERNATE
+  # ============================================================
+  jpa:
+    hibernate:
+      ddl-auto: validate           # Validate schema matches entities (Flyway manages it)
+    show-sql: false                # Set to true for debugging SQL
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        # PERFORMANCE: Enable second-level cache for read-heavy entities
+        # cache.use_second_level_cache: true
+
+  # ============================================================
+  # FLYWAY (Schema Migrations)
+  # Sprint 2: Schema management
+  # ============================================================
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+# ============================================================
+# SPRING BOOT ACTUATOR (Observability — Sprint 4)
+# ============================================================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, prometheus, env
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: always         # Show DB health, disk, etc.
+  metrics:
+    export:
+      prometheus:
+        enabled: true              # Enables /actuator/prometheus endpoint
+
+# ============================================================
+# SERVER
+# ============================================================
+server:
+  port: 8080
+  error:
+    include-message: always        # Include exception message in error responses
+
+# ============================================================
+# LOGGING
+# ============================================================
+logging:
+  level:
+    com.sap.sflit: DEBUG
+    org.springframework.web: INFO
+    org.hibernate.SQL: DEBUG       # Log SQL queries (Sprint 2 debugging)
+    org.hibernate.type: TRACE      # Log SQL parameters
+
+# ============================================================
+# APP INFO (shown at /actuator/info)
+# ============================================================
+info:
+  app:
+    name: SuccessFactors Lite
+    description: SAP Interview Demo - Multi-tenant Employee Management
+    version: 1.0.0
+    java-version: 17
+    sprint: "All 5 Sprints"
