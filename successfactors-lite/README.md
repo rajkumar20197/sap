@@ -1,67 +1,63 @@
-# 🚀 SuccessFactors Lite (Interview Demo Project)
+# SAP SuccessFactors Lite 🏢
 
-This project is your secret weapon for the SAP SuccessFactors interview. 
-It demonstrates that you don't just "know Java" — you know how to build cloud-native, multi-tenant enterprise software mirroring SAP's architecture.
+> **Enterprise-grade, Multi-Tenant Spring Boot Microservice** built with Java 17, PostgreSQL, and Model Context Protocol (MCP) tooling. 
 
-## 🏗️ What We Built (Sprints 1 & 2)
+This project demonstrates core architectural patterns used in modern SaaS environments like SAP SuccessFactors, focusing on strict data isolation, observability, and AI integration.
 
-**1. Core Spring Boot + Java 17:**
-- `EmployeeDTO`: Uses Java 17 `record` for immutable data transfer.
-- `EmployeeService`: Uses Java Stream API for advanced in-memory filtering.
-- `EmployeeController`: RESTful API supporting OData-style `$filter` parameters.
+## 🚀 Key Features
 
-**2. Multi-Tenancy (The SAP Way):**
-- `TenantInterceptor`: Extracts the `X-Tenant-ID` header from every API request.
-- `TenantContext`: Stores the tenant ID in a `ThreadLocal` for thread-safe access.
-- `EmployeeRepository`: Enforces `tenant_id = ?` isolation on every database query.
+*   **Row-Level Multi-Tenancy:** Implements a shared-database, shared-schema pattern using Spring `HandlerInterceptor` and `ThreadLocal` contexts to strictly enforce tenant boundaries (e.g., preventing cross-tenant data leaks).
+*   **Performance Optimized:** Solves the N+1 query problem using JPA `@EntityGraph` and optimizes read performance through PostgreSQL composite indexing.
+*   **AI/LLM Integration (MCP):** Features a natively built JSON-RPC Model Context Protocol server, empowering AI Agents to securely invoke internal database tools while conforming to Tenant headers.
+*   **DevOps & Observability:** Automatically deployed via GitHub Actions CI/CD pipelines. Features a Multi-Stage Dockerfile tuned with specific JVM Garbage Collection flags (`-XX:+UseG1GC`) and Spring Boot Actuator Kubernetes Readiness probes.
 
-**3. Database & Optimization:**
-- Flyway migrations (`V1__init.sql` & `V2__seed_data.sql`) manage the schema.
-- Composite indexes added to prevent `Seq Scan` (sequential scans) in PostgreSQL.
+---
 
-**4. Quality & Testing (Sprint 4 Preview):**
-- `EmployeeServiceTest`: Business logic tested using Mockito + JUnit 5.
-- `GlobalExceptionHandler`: Centralized JSON error serialization.
+## 🏗️ System Architecture
 
-## 🛠️ How to Run & Test It
-
-### Prerequisites
-- Docker & Docker Compose (for PostgreSQL)
-- Java 17
-- Maven (or use your IDE's built-in Maven like IntelliJ / VS Code Java Extension)
-
-### 1. Start the Database
-Open a terminal in this folder and run:
-```bash
-docker-compose up -d
-```
-*This starts a PostgreSQL 15 database on port 5432 and seeds it automatically upon app startup.*
-
-### 2. Run the Application
-You can run `SuccessFactorsLiteApplication.java` directly from your IDE, or via terminal (if Maven is installed):
-```bash
-mvn spring-boot:run
+```mermaid
+graph TD
+    Client[Web / Mobile Client] -->|HTTP / REST| API[Spring Boot API]
+    AIClient[Claude / Custom AI Agent] -->|JSON-RPC <br> (MCP Protocol)| API
+    
+    subgraph "SuccessFactors Lite Microservice"
+        API --> Interceptor[TenantInterceptor <br> (Extracts X-Tenant-ID)]
+        Interceptor --> Context[TenantContext <br> (ThreadLocal Storage)]
+        Context --> Controller[REST / MCP Controllers]
+        Controller --> Service[Business Logic]
+        Service --> Repo[Spring Data JPA <br> + Entity Graphs]
+    end
+    
+    Repo -->|JDBC| DB[(PostgreSQL 15)]
+    
+    subgraph "Observability"
+        Prometheus[Prometheus / Grafana] -->|Scrapes| Actuator[Spring Boot Actuator <br> /health, /metrics]
+    end
 ```
 
-### 3. Test the Multi-Tenancy (API Calls)
-Once running on `localhost:8080`, try these commands to see multi-tenancy in action!
+## 🛠️ Tech Stack
+*   **Backend:** Java 17, Spring Boot 3.2, Spring Data JPA, Hibernate
+*   **Database:** PostgreSQL 15, Flyway (Schema Migrations), HikariCP
+*   **Infrastructure:** Docker, Docker Compose, GitHub Actions
+*   **Quality:** JUnit 5, Mockito, JaCoCo
 
-**Get employees for Tenant 1 (acme-corp):**
+---
+
+## 💻 Local Development
+
+Run the entire platform instantly using Docker Compose:
+
 ```bash
-curl -H "X-Tenant-ID: acme-corp" http://localhost:8080/api/v1/employees
+# Start both the Database and API server
+docker compose up --build -d
 ```
 
-**Get employees for Tenant 2 (globex-inc):**
-```bash
-curl -H "X-Tenant-ID: globex-inc" http://localhost:8080/api/v1/employees
-```
-*Notice how the data is completely isolated even though it's the same database table!*
+### Try the AI/MCP Endpoint
+Simulate an AI Agent retrieving an employee summary securely for a specific company:
 
-**OData-Style Filtering Demo:**
 ```bash
-curl -H "X-Tenant-ID: acme-corp" "http://localhost:8080/api/v1/employees?department=Engineering&skill=Java"
+curl -X POST http://localhost:8080/mcp/rpc \
+  -H "Content-Type: application/json" \
+  -H "X-Tenant-ID: acme-corp" \
+  -d '{"jsonrpc": "2.0", "id": 1, "method": "tools/call", "params": {"name": "get_employee_summary", "arguments": {"employee_id": 1}}}'
 ```
-
-## 🎤 Interview Prep Note
-Keep this project open in your IDE during the interview. When Dhiraj asks "How would you handle data isolation for thousands of clients?", you can confidently reply: 
-> "I actually built a prototype for this. I used a ThreadLocal context to store the tenant ID from the request header, and intercepted every request to apply it at the repository level. This ensures no engineer can accidentally write a query that leaks data across companies."
