@@ -18,5 +18,21 @@ services:
       timeout: 5s
       retries: 5
 
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sflit-api
+    ports:
+      - "8080:8080"
+    environment:
+      # Override localhost with the Docker internal network name "postgres"
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/sflit
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+    depends_on:
+      postgres:
+        condition: service_healthy
+
 volumes:
   postgres-data:

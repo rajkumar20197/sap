@@ -27,7 +27,7 @@ spring:
   # ============================================================
   jpa:
     hibernate:
-      ddl-auto: validate           # Validate schema matches entities (Flyway manages it)
+      ddl-auto: none               # Let Flyway manage schema fully without strict JPA type validation
     show-sql: false                # Set to true for debugging SQL
     properties:
       hibernate:

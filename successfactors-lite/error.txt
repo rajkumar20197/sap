@@ -1,0 +1,288 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.sap:successfactors-lite >---------------------
+[INFO] Building successfactors-lite 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.4:run (default-cli) > test-compile @ successfactors-lite >>>
+[INFO] 
+[INFO] --- jacoco:0.8.11:prepare-agent (default) @ successfactors-lite ---
+[INFO] argLine set to -javaagent:C:\\Users\\rajku\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.11\\org.jacoco.agent-0.8.11-runtime.jar=destfile=C:\\Users\\rajku\\OneDrive\\Desktop\\sap\\successfactors-lite\\target\\jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ successfactors-lite ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ successfactors-lite ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ successfactors-lite ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ successfactors-lite ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.2.4:run (default-cli) < test-compile @ successfactors-lite <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.4:run (default-cli) @ successfactors-lite ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2026-04-04T11:41:36.205-07:00  INFO 79448 --- [successfactors-lite] [           main] c.s.sflit.SuccessFactorsLiteApplication  : Starting SuccessFactorsLiteApplication using Java 20.0.2 with PID 79448 (C:\Users\rajku\OneDrive\Desktop\sap\successfactors-lite\target\classes started by rajku in C:\Users\rajku\OneDrive\Desktop\sap\successfactors-lite)
+2026-04-04T11:41:36.206-07:00 DEBUG 79448 --- [successfactors-lite] [           main] c.s.sflit.SuccessFactorsLiteApplication  : Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-04-04T11:41:36.206-07:00  INFO 79448 --- [successfactors-lite] [           main] c.s.sflit.SuccessFactorsLiteApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-04-04T11:41:36.938-07:00  INFO 79448 --- [successfactors-lite] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-04T11:41:36.981-07:00  INFO 79448 --- [successfactors-lite] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+2026-04-04T11:41:37.568-07:00  INFO 79448 --- [successfactors-lite] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-04-04T11:41:37.578-07:00  INFO 79448 --- [successfactors-lite] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-04T11:41:37.578-07:00  INFO 79448 --- [successfactors-lite] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-04-04T11:41:37.626-07:00  INFO 79448 --- [successfactors-lite] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-04T11:41:37.626-07:00  INFO 79448 --- [successfactors-lite] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1380 ms
+2026-04-04T11:41:37.830-07:00  INFO 79448 --- [successfactors-lite] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-04T11:41:37.974-07:00  INFO 79448 --- [successfactors-lite] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6d4a05f7
+2026-04-04T11:41:37.976-07:00  INFO 79448 --- [successfactors-lite] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-04T11:41:38.044-07:00  INFO 79448 --- [successfactors-lite] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-04-04T11:41:38.044-07:00  INFO 79448 --- [successfactors-lite] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-04-04T11:41:38.044-07:00  INFO 79448 --- [successfactors-lite] [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-04-04T11:41:38.058-07:00  INFO 79448 --- [successfactors-lite] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/sflit (PostgreSQL 15.17)
+2026-04-04T11:41:38.105-07:00  INFO 79448 --- [successfactors-lite] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.028s)
+2026-04-04T11:41:38.124-07:00  INFO 79448 --- [successfactors-lite] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 2
+2026-04-04T11:41:38.127-07:00  INFO 79448 --- [successfactors-lite] [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-04-04T11:41:38.215-07:00  INFO 79448 --- [successfactors-lite] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-04T11:41:38.270-07:00  INFO 79448 --- [successfactors-lite] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-04-04T11:41:38.311-07:00  INFO 79448 --- [successfactors-lite] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-04T11:41:38.387-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@2e7a9db7
+2026-04-04T11:41:38.387-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@2e7a9db7
+2026-04-04T11:41:38.387-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@2e7a9db7
+2026-04-04T11:41:38.388-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@5315266
+2026-04-04T11:41:38.388-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@5315266
+2026-04-04T11:41:38.388-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@11cc9e1e
+2026-04-04T11:41:38.388-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@11cc9e1e
+2026-04-04T11:41:38.388-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@216328b2
+2026-04-04T11:41:38.388-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@216328b2
+2026-04-04T11:41:38.388-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@5b0e9e0c
+2026-04-04T11:41:38.388-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@5b0e9e0c
+2026-04-04T11:41:38.388-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@5b0e9e0c
+2026-04-04T11:41:38.389-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@54234569
+2026-04-04T11:41:38.389-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@54234569
+2026-04-04T11:41:38.389-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@54234569
+2026-04-04T11:41:38.389-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@21ea1d9d
+2026-04-04T11:41:38.389-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@21ea1d9d
+2026-04-04T11:41:38.389-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@19f497aa
+2026-04-04T11:41:38.389-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@36a58466
+2026-04-04T11:41:38.389-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@36a58466
+2026-04-04T11:41:38.389-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@78e387d6
+2026-04-04T11:41:38.389-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@9147ba2
+2026-04-04T11:41:38.389-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@3460e4ed
+2026-04-04T11:41:38.389-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@3460e4ed
+2026-04-04T11:41:38.389-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@3460e4ed
+2026-04-04T11:41:38.390-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@2efcc0b3
+2026-04-04T11:41:38.390-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@2efcc0b3
+2026-04-04T11:41:38.390-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@2efcc0b3
+2026-04-04T11:41:38.390-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@4a453f8d
+2026-04-04T11:41:38.390-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@4a453f8d
+2026-04-04T11:41:38.390-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@4a453f8d
+2026-04-04T11:41:38.390-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@60a6840c
+2026-04-04T11:41:38.390-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@60a6840c
+2026-04-04T11:41:38.390-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@60a6840c
+2026-04-04T11:41:38.390-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@53525379
+2026-04-04T11:41:38.390-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@53525379
+2026-04-04T11:41:38.391-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@53525379
+2026-04-04T11:41:38.391-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@1be3f8f8
+2026-04-04T11:41:38.391-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@1be3f8f8
+2026-04-04T11:41:38.391-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@78b9155e
+2026-04-04T11:41:38.391-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@78b9155e
+2026-04-04T11:41:38.391-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@2ceb68a1
+2026-04-04T11:41:38.391-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@2ceb68a1
+2026-04-04T11:41:38.391-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@2ceb68a1
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@6de33fde
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@69c33ea2
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@69c33ea2
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@59e0d521
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@2e3900dc
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@2e3900dc
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@2e3900dc
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@5ad0c70a
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@2a16d4dc
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@75805562
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@13d984ee
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@13d984ee
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@4fedf908
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@4fedf908
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@5341641d
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@241d1052
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@7b3c0ecb
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@5bb99d1d
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@3006bfb
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@4fd37449
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@5402612e
+2026-04-04T11:41:38.392-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@5402612e
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@43445fc6
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@43445fc6
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@431babe6
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@431babe6
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@17befef0
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@17befef0
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@5072e638
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@5072e638
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@3129299f
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@2f73f0c7
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@4fdac2a7
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@4fdac2a7
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@8debe42
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@70c31b17
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@40863800
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@5950054d
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@5950054d
+2026-04-04T11:41:38.393-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@24018c8b
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@4cf230bf
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@3dc55719
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@3dc55719
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@64665781
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@64665781
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@4c2bea52
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@4c2bea52
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@4c2bea52
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@11015ca0
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@11015ca0
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@11015ca0
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@6ebbc06
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@50672905
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@430d3021
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@430d3021
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@58f290bc
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@58f290bc
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@58f290bc
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@3220c28
+2026-04-04T11:41:38.394-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@6ae42248
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@40c28b0d
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@40c28b0d
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@cf984d9
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@cf984d9
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@cf984d9
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@1fa98a22
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@1fa98a22
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@54941dfd
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@54941dfd
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@5a7e81
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@5a7e81
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@4045fd1f
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@4045fd1f
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@13ee97af
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@13ee97af
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@67e11bda
+2026-04-04T11:41:38.395-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@341ccfd1
+2026-04-04T11:41:38.401-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@498e41a4
+2026-04-04T11:41:38.401-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@498e41a4
+2026-04-04T11:41:38.401-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@70ee1963
+2026-04-04T11:41:38.402-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@2e0652ab
+2026-04-04T11:41:38.402-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@129b69b2
+2026-04-04T11:41:38.402-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@12be4f83
+2026-04-04T11:41:38.402-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@eb1d475
+2026-04-04T11:41:38.402-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@389008d1
+2026-04-04T11:41:38.402-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@718f3088
+2026-04-04T11:41:38.402-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@11adab6d
+2026-04-04T11:41:38.402-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@11bfd751
+2026-04-04T11:41:38.538-07:00  INFO 79448 --- [successfactors-lite] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-04T11:41:38.578-07:00  WARN 79448 --- [successfactors-lite] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-04T11:41:38.597-07:00 DEBUG 79448 --- [successfactors-lite] [           main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@99223ac) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@4a5fab78)
+2026-04-04T11:41:38.597-07:00 DEBUG 79448 --- [successfactors-lite] [           main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@77a85e76) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2cebf82f)
+2026-04-04T11:41:38.599-07:00 DEBUG 79448 --- [successfactors-lite] [           main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2004, BlobTypeDescriptor(BLOB_BINDING)) replaced previous registration(BlobTypeDescriptor(DEFAULT))
+2026-04-04T11:41:38.599-07:00 DEBUG 79448 --- [successfactors-lite] [           main] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(CLOB_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2026-04-04T11:41:38.605-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration JAVA_OBJECT -> org.hibernate.type.JavaObjectType@47c5cbf2
+2026-04-04T11:41:38.605-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@47c5cbf2
+2026-04-04T11:41:38.605-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Type registration key [java.lang.Object] overrode previous entry : `org.hibernate.type.JavaObjectType@498e41a4`
+2026-04-04T11:41:38.609-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2026-04-04T11:41:38.609-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2026-04-04T11:41:38.609-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2026-04-04T11:41:38.611-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.OffsetDateTimeType -> basicType@2(java.time.OffsetDateTime,3003)
+2026-04-04T11:41:38.611-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
+2026-04-04T11:41:38.611-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
+2026-04-04T11:41:38.611-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.ZonedDateTimeType -> basicType@3(java.time.ZonedDateTime,3003)
+2026-04-04T11:41:38.611-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
+2026-04-04T11:41:38.611-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
+2026-04-04T11:41:38.612-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.OffsetTimeType -> basicType@4(java.time.OffsetTime,3007)
+2026-04-04T11:41:38.612-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> basicType@4(java.time.OffsetTime,3007)
+2026-04-04T11:41:38.612-07:00 DEBUG 79448 --- [successfactors-lite] [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> basicType@4(java.time.OffsetTime,3007)
+2026-04-04T11:41:38.613-07:00 DEBUG 79448 --- [successfactors-lite] [           main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@674e4c82] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@572b4072]
+2026-04-04T11:41:39.332-07:00  INFO 79448 --- [successfactors-lite] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-04T11:41:39.333-07:00 DEBUG 79448 --- [successfactors-lite] [           main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@674e4c82] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@580e01cd]
+2026-04-04T11:41:39.370-07:00 TRACE 79448 --- [successfactors-lite] [           main] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@580e01cd] for TypeConfiguration
+2026-04-04T11:41:39.370-07:00 DEBUG 79448 --- [successfactors-lite] [           main] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@43c64d6f] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@580e01cd]
+2026-04-04T11:41:39.372-07:00 ERROR 79448 --- [successfactors-lite] [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [performance_score] in table [employees]; found [numeric (Types#NUMERIC)], but expecting [float(53) (Types#FLOAT)]
+2026-04-04T11:41:39.372-07:00  WARN 79448 --- [successfactors-lite] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [performance_score] in table [employees]; found [numeric (Types#NUMERIC)], but expecting [float(53) (Types#FLOAT)]
+2026-04-04T11:41:39.372-07:00  INFO 79448 --- [successfactors-lite] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-04T11:41:39.375-07:00  INFO 79448 --- [successfactors-lite] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-04T11:41:39.378-07:00  INFO 79448 --- [successfactors-lite] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-04-04T11:41:39.391-07:00  INFO 79448 --- [successfactors-lite] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-04T11:41:39.405-07:00 ERROR 79448 --- [successfactors-lite] [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [performance_score] in table [employees]; found [numeric (Types#NUMERIC)], but expecting [float(53) (Types#FLOAT)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at com.sap.sflit.SuccessFactorsLiteApplication.main(SuccessFactorsLiteApplication.java:9) ~[classes/:na]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [performance_score] in table [employees]; found [numeric (Types#NUMERIC)], but expecting [float(53) (Types#FLOAT)]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.1.5.jar:6.1.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.5.jar:6.1.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.5.jar:6.1.5]
+	... 16 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [performance_score] in table [employees]; found [numeric (Types#NUMERIC)], but expecting [float(53) (Types#FLOAT)]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateColumnType(AbstractSchemaValidator.java:165) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:152) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:97) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:75) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:295) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.5.jar:6.1.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.5.jar:6.1.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.5.jar:6.1.5]
+	... 20 common frames omitted
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.778 s
+[INFO] Finished at: 2026-04-04T11:41:39-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.2.4:run (default-cli) on project successfactors-lite: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

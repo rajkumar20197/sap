@@ -69,6 +69,7 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-database-postgresql</artifactId>
+            <version>10.10.0</version>
         </dependency>
 
         <!-- Micrometer Prometheus (Metrics) -->
@@ -90,6 +91,8 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- Spring AI MCP Server (Sprint 3) -->
     </dependencies>
 
     <build>

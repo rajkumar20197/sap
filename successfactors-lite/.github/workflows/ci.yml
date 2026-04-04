@@ -1,0 +1,52 @@
+name: Enterprise CI Pipeline
+
+on:
+  push:
+    branches: [ "master", "main" ]
+  pull_request:
+    branches: [ "master", "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    # We simulate a real CI environment by booting up a throwaway Postgres database
+    # specifically for our tests to throw data into
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_USER: sap_user
+          POSTGRES_PASSWORD: sap_password
+          POSTGRES_DB: sflit
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Java 17 (Temurin)
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+        
+    - name: Compile and Run Unit Tests
+      run: mvn -B clean test --file pom.xml
+      
+    - name: Enforce Code Coverage (JaCoCo)
+      # If coverage is below 80%, this pipeline step will CRASH and prevent the engineer 
+      # from merging their code. This proves we care about Code Quality!
+      run: mvn jacoco:check
+      
+    - name: Build Final JAR Payload
+      run: mvn -B package -DskipTests
+      
+    - name: Optional - Build Docker Image
+      run: docker build -t successfactors-lite:latest .
