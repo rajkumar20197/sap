@@ -17,21 +17,21 @@ This project demonstrates core architectural patterns used in modern SaaS enviro
 
 ```mermaid
 graph TD
-    Client[Web / Mobile Client] -->|HTTP / REST| API[Spring Boot API]
-    AIClient[Claude / Custom AI Agent] -->|JSON-RPC <br> (MCP Protocol)| API
+    Client["Web / Mobile Client"] -->|"HTTP / REST"| API["Spring Boot API"]
+    AIClient["Claude / Custom AI Agent"] -->|"JSON-RPC (MCP)"| API
     
     subgraph "SuccessFactors Lite Microservice"
-        API --> Interceptor[TenantInterceptor <br> (Extracts X-Tenant-ID)]
-        Interceptor --> Context[TenantContext <br> (ThreadLocal Storage)]
-        Context --> Controller[REST / MCP Controllers]
-        Controller --> Service[Business Logic]
-        Service --> Repo[Spring Data JPA <br> + Entity Graphs]
+        API --> Interceptor["TenantInterceptor (Extracts X-Tenant-ID)"]
+        Interceptor --> Context["TenantContext (ThreadLocal Storage)"]
+        Context --> Controller["REST / MCP Controllers"]
+        Controller --> Service["Business Logic"]
+        Service --> Repo["Spring Data JPA (Entity Graphs)"]
     end
     
-    Repo -->|JDBC| DB[(PostgreSQL 15)]
+    Repo -->|"JDBC"| DB[("PostgreSQL 15")]
     
     subgraph "Observability"
-        Prometheus[Prometheus / Grafana] -->|Scrapes| Actuator[Spring Boot Actuator <br> /health, /metrics]
+        Prometheus["Prometheus / Grafana"] -->|"Scrapes"| Actuator["Spring Boot Actuator (/health, /metrics)"]
     end
 ```
 
